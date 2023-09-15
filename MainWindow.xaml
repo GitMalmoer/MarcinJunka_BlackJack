@@ -23,6 +23,13 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <Grid Grid.Column="0">
+                <Button x:Name="btnHit" Width="30" Height="20" Margin="5" Click="btnHit_Click">Hit</Button>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button x:Name="btnStand" Width="30" Height="20" Margin="5" Click="btnStand_Click">Stand</Button>
+            </Grid>
+
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -33,12 +40,14 @@
                         <Label HorizontalAlignment="Center">Dealer</Label>
                         <TextBox x:Name="txtScoreDealer" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBox>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel x:Name="dealerImagesPanel" HorizontalAlignment="Center" Orientation="Horizontal">
                         <Image x:Name="imgDealerCard1" Height="60" Width="40"></Image>
                         <Image x:Name="imgDealerCard2" Height="60" Width="40"></Image>
                         <Image x:Name="imgDealerCard3" Height="60" Width="40"></Image>
                         <Image x:Name="imgDealerCard4" Height="60" Width="40"></Image>
                         <Image x:Name="imgDealerCard5" Height="60" Width="40"></Image>
+                        <Image x:Name="imgDealerCard6" Height="60" Width="40"></Image>
+                        <Image x:Name="imgDealerCard7" Height="60" Width="40"></Image>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Row="1">
@@ -46,12 +55,14 @@
                     <Label HorizontalAlignment="Center">Player</Label>
                         <TextBox x:Name="txtScorePlayer" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBox>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel x:Name="playerImagesPanel" HorizontalAlignment="Center" Orientation="Horizontal">
                         <Image x:Name="imgPlayerCard1" Height="60" Width="40"></Image>
                         <Image x:Name="imgPlayerCard2" Height="60" Width="40"></Image>
                         <Image x:Name="imgPlayerCard3" Height="60" Width="40"></Image>
                         <Image x:Name="imgPlayerCard4" Height="60" Width="40"></Image>
                         <Image x:Name="imgPlayerCard5" Height="60" Width="40"></Image>
+                        <Image x:Name="imgPlayerCard6" Height="60" Width="40"></Image>
+                        <Image x:Name="imgPlayerCard7" Height="60" Width="40"></Image>
                     </StackPanel>
                 </StackPanel>
             </Grid>
@@ -68,14 +79,14 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="0" >
                 <Label HorizontalAlignment="Center" VerticalAlignment="Center">Saldo:</Label>
-                <TextBox x:Name="txtSaldo" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" >0</TextBox>
+                <TextBox x:Name="txtSaldo" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center" >0</TextBox>
 
                 <Label VerticalAlignment="Center" HorizontalAlignment="Center">Current Bet:</Label>
-                <TextBox x:Name="txtBet" Width="20" Text="{Binding CurrentBet}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBox>
+                <TextBox x:Name="txtBet" Width="40" Text="{Binding CurrentBet}" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBox>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <Button x:Name="btnShuffle" Width="40" Height="20" Margin="5" Click="btnShuffle_Click">shuffle</Button>
+                <Button x:Name="btnShuffle" Width="80" Height="20" Margin="5" Click="btnNewGame_Click">NEW GAME</Button>
                 <Button x:Name="btnBet5" Width="30" Height="20" Margin="5" Click="btnBet5_Click">5$</Button>
                 <Button x:Name="btnBet10" Width="30" Height="20" Margin="5" Click="btnBet10_Click">10$</Button>
                 <Button x:Name="btnBet20" Width="30" Height="20" Margin="5" Click="btnBet20_Click">20$</Button>
@@ -83,8 +94,7 @@
                 <Button x:Name="btnBet100" Width="30" Height="20" Margin="5" Click="btnBet100_Click">100$</Button>
                 <Button x:Name="btnDeal" Width="30" Height="20" Margin="5" Click="btnDeal_Click">Deal</Button>
                 <Line Height="30"></Line>
-                <Button x:Name="btnHit" Width="30" Height="20" Margin="5" Click="btnHit_Click">Hit</Button>
-                <Button x:Name="btnStand" Width="30" Height="20" Margin="5" Click="btnStand_Click">Stand</Button>
+              
 
 
             </StackPanel>
