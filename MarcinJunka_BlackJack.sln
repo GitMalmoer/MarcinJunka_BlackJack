@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcinJunka_BlackJack", "MarcinJunka_BlackJack.csproj", "{38F20268-C022-4B7A-ACF0-44BB490D142F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarcinJunka_BlackJack", "MarcinJunka_BlackJack.csproj", "{38F20268-C022-4B7A-ACF0-44BB490D142F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic", "..\Business Logic\Business Logic.csproj", "{A2A2781D-57EA-4CDB-B5C9-3DE5D8E55238}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business Logic", "..\Business Logic\Business Logic.csproj", "{A2A2781D-57EA-4CDB-B5C9-3DE5D8E55238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Acess", "..\Data Acess\Data Acess.csproj", "{F57728F2-1C51-4AD0-9025-0C10B64DC41D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access", "..\Data Acess\Data Access.csproj", "{F57728F2-1C51-4AD0-9025-0C10B64DC41D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

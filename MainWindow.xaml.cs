@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Business_Logic;
+using Business_Logic.MODELS;
+using Data_Acess;
 
 namespace MarcinJunka_BlackJack
 {
@@ -22,10 +24,12 @@ namespace MarcinJunka_BlackJack
     public partial class MainWindow : Window
     {
         private GameMechanics GameMechanics;
-        public MainWindow()
+        private IAppDbContext _dbContext;
+        public MainWindow(IAppDbContext dbContext)
         {
+            _dbContext = dbContext;
             InitializeComponent();
-            GameMechanics = new GameMechanics();
+            GameMechanics = new GameMechanics(_dbContext);
             DataContext = GameMechanics;
             InitalizeGUI();
         }
