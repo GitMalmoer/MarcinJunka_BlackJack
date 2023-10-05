@@ -23,13 +23,14 @@ namespace MarcinJunka_BlackJack
     /// </summary>
     public partial class MainWindow : Window
     {
-        private GameMechanics GameMechanics;
-        private IAppDbContext _dbContext;
-        public MainWindow(IAppDbContext dbContext)
+        public readonly GameMechanics GameMechanics;
+        //private IAppDbContext _dbContext;
+        public MainWindow(GameMechanics gameMechanics)
         {
-            _dbContext = dbContext;
+            GameMechanics = gameMechanics;
+            //_dbContext = dbContext;
             InitializeComponent();
-            GameMechanics = new GameMechanics(_dbContext);
+            //GameMechanics = new GameMechanics();
             DataContext = GameMechanics;
             InitalizeGUI();
         }
