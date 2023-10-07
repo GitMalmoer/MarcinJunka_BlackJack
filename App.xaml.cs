@@ -22,12 +22,14 @@ public partial class App : Application
                     opt.UseSqlServer(context.Configuration.GetConnectionString("DefaultConnectionString")),
                     ServiceLifetime.Scoped
                     );
-            services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>()!);
+            services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>()!); 
+
+
+
 
             services.AddSingleton<GameMechanics>(provider =>
             {
-                GameMechanics gameMechanics = new GameMechanics();
-                gameMechanics._dbContext = provider.GetService<IAppDbContext>();
+                GameMechanics gameMechanics = new GameMechanics(provider.GetService<IAppDbContext>()!);
                 return gameMechanics;
             });
 

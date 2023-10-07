@@ -1,0 +1,27 @@
+﻿<Window x:Class="MarcinJunka_BlackJack.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarcinJunka_BlackJack"
+        mc:Ignorable="d"
+        Title="DataWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="0.1*"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+            <Label VerticalAlignment="Center" >search by game id:</Label>
+            <TextBox x:Name="txtSearchByGameId" Width="80" Height="20" Margin="5 0 5 0"></TextBox><Button x:Name="btnSearch" Width="80" Height="20" Click="btnSearch_Click">Search</Button>
+
+            <Button x:Name="btnShowAllData" Height="20" Width="80" Margin="5 0 5 0" Click="btnShowAllData_Click">Show All Data</Button>
+                <Button x:Name="btnDeleteAllData" Height="20" Width="90" Margin="5 0 5 0" Click="btnDeleteAllData_Click" >Delete All Data</Button>
+            </StackPanel>
+        </Grid>
+
+        <DataGrid Grid.Row="1" x:Name="dataGridGames" Margin="5" Padding="10"></DataGrid>
+    </Grid>
+</Window>

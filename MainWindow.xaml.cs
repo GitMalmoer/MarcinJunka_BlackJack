@@ -24,13 +24,13 @@ namespace MarcinJunka_BlackJack
     public partial class MainWindow : Window
     {
         public readonly GameMechanics GameMechanics;
+        IAppDbContext _dbContext;
         //private IAppDbContext _dbContext;
-        public MainWindow(GameMechanics gameMechanics)
+        public MainWindow(GameMechanics gameMechanics, IAppDbContext dbContext)
         {
             GameMechanics = gameMechanics;
-            //_dbContext = dbContext;
+            _dbContext = dbContext;
             InitializeComponent();
-            //GameMechanics = new GameMechanics();
             DataContext = GameMechanics;
             InitalizeGUI();
         }
@@ -198,6 +198,7 @@ namespace MarcinJunka_BlackJack
 
         private void GameMechanics_CardIsDrawnEvent(object? sender, EventArgs e)
         {
+            // we assign images according to if player if standing. If player is standing then dealer can show all of his cards.
             if (!GameMechanics.CheckPlayerStanding())
             {
                 AssignPlayerImages();
@@ -278,5 +279,12 @@ namespace MarcinJunka_BlackJack
         }
 
 
+        private void MenuShowData_OnClick(object sender, RoutedEventArgs e)
+        {
+            DataWindow dataWindow = new DataWindow(_dbContext);
+            dataWindow.Show();
+
+
+        }
     }
 }
