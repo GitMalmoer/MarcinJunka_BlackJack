@@ -4,5 +4,6 @@ Assignment made for Malmo University
 - Three Layer Architecture
 - Delegates
 - Events
+- Dependency Inversion and IoC Container 
 
-![image](https://github.com/GitMalmoer/MarcinJunka_BlackJack/assets/113827015/2eed5080-b920-4120-91b7-e0886d78a0b4)
+![image](https://github.com/GitMalmoer/MarcinJunka_BlackJack/assets/113827015/cd5a63e1-0837-4a32-b654-aec12d9666ca)
